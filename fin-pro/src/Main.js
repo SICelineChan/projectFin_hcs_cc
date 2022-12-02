@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   MDBNavbar,
   MDBNavbarNav,
@@ -16,7 +17,12 @@ export default function Main() {
 
   return (
     <header>
-      <MDBNavbar expand="lg" light bgColor="white">
+      <MDBNavbar
+        expand="lg"
+        light
+        bgColor="white"
+        style={{ "--bs-gap": "1rem 1rem" }}
+      >
         <MDBContainer fluid>
           <MDBNavbarToggler
             onClick={() => setShowBasic(!showBasic)}
@@ -29,18 +35,21 @@ export default function Main() {
           <MDBCollapse navbar show={showBasic}>
             <MDBNavbarNav right className="mb-2 mb-lg-0">
               <MDBNavbarItem active>
-                <MDBNavbarLink aria-current="page" href="#">
+                <MDBNavbarLink aria-current="page" href="/home">
                   Home
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#">Locations</MDBNavbarLink>
+                {" "}
+                <MDBNavbarLink href="/dashboard">Dashboard</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#">About Me</MDBNavbarLink>
+                {" "}
+                <MDBNavbarLink href="/about">About</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#">Contact</MDBNavbarLink>
+                {" "}
+                <MDBNavbarLink href="contact">Contact</MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
           </MDBCollapse>
@@ -51,6 +60,7 @@ export default function Main() {
         className="p-5 text-center bg-image"
         style={{
           backgroundImage: "url('/Images/Madeira6Oct19.jpg')",
+          marginTop: "16px",
           height: "600px",
         }}
       >
