@@ -1,3 +1,4 @@
+import PlaceCards from "./PlaceCards";
 import SideBarMenu from "./SideBarMenu";
 import TopMenu from "./TopMenu";
 
@@ -14,6 +15,7 @@ export default function Dashboard() {
       <div className="d-flex flex-column">
         <TopMenu title="Eat Noodles Go Travel!"></TopMenu>
         <SideBarMenu menu={menu} />
+        <PlaceCards></PlaceCards>
       </div>
     </div>
   );

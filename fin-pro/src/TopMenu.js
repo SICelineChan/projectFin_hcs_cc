@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   MDBNavbar,
   MDBContainer,
@@ -36,12 +37,9 @@ export default function TopMenu({ title }) {
         <MDBCollapse navbar show={showNavRight}>
           <MDBNavbarNav right fullWidth={false} className="mb-2 mb-lg-0">
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current="page" href="#">
+              <MDBNavbarLink active aria-current="page" href="/home">
                 Home
               </MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink href="#">About Me</MDBNavbarLink>
             </MDBNavbarItem>
 
             <MDBNavbarItem>
@@ -55,16 +53,6 @@ export default function TopMenu({ title }) {
                   <MDBDropdownItem link>New Post</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink
-                disabled
-                href="#"
-                tabIndex={-1}
-                aria-disabled="true"
-              >
-                Contact
-              </MDBNavbarLink>
             </MDBNavbarItem>
           </MDBNavbarNav>
         </MDBCollapse>
