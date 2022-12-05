@@ -1,5 +1,5 @@
 {
-  "name": "fin-pro",
+  "name": "fin_pro",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,8 +8,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
+    "mapbox-gl": "^2.11.0",
     "mdb-react-ui-kit": "^5.0.0",
-    "mdb-ui-kit": "^6.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",

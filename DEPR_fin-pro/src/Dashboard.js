@@ -1,3 +1,4 @@
+import React from "react";
 import PlaceCards from "./PlaceCards";
 import SideBarMenu from "./SideBarMenu";
 import TopMenu from "./TopMenu";

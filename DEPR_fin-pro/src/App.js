@@ -1,6 +1,8 @@
 import React from "react";
+
 import "./App.css";
 import Main from "./Main";
+
 // import PlaceCards from "./PlaceCards";
 // import TopMenu from "./TopMenu";
 // import MenuOptions from "./MenuOptions";
@@ -8,6 +10,7 @@ import Main from "./Main";
 // import TopMenu from "./TopMenu";
 import { Route } from "wouter";
 import Dashboard from "./Dashboard";
+// import MapTest from "./MapTest";
 
 function App() {
   // const menu = [
@@ -19,9 +22,10 @@ function App() {
   return (
     <div>
       {/* <Link href="/home">Home</Link> */}
-      <Route path="/home" component={Main}></Route>
+      {/* <Route path="/home" component={Main}></Route> */}
 
       <Route path="/dashboard" component={Dashboard}></Route>
+      {/* <Route path="/map" component={MapTest}></Route> */}
 
       {/* <div className="d-flex flex-column">
         <TopMenu title="Eat Noodles Go Travel!"></TopMenu>
