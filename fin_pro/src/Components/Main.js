@@ -19,45 +19,6 @@ export default function Main() {
   return (
     <>
       <header>
-        <MDBNavbar
-          expand="lg"
-          light
-          bgColor="white"
-          style={{ "--bs-gap": "1rem 1rem" }}
-        >
-          <MDBContainer fluid>
-            <MDBNavbarToggler
-              onClick={() => setShowBasic(!showBasic)}
-              aria-controls="navbarExample01"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <MDBIcon fas icon="bars" />
-            </MDBNavbarToggler>
-            <MDBCollapse navbar show={showBasic}>
-              <MDBNavbarNav right className="mb-2 mb-lg-0">
-                <MDBNavbarItem active>
-                  <MDBNavbarLink aria-current="page" href="/home">
-                    Home
-                  </MDBNavbarLink>
-                </MDBNavbarItem>
-                <MDBNavbarItem>
-                  {" "}
-                  <MDBNavbarLink href="/dashboard">Dashboard</MDBNavbarLink>
-                </MDBNavbarItem>
-                <MDBNavbarItem>
-                  {" "}
-                  <MDBNavbarLink href="/about">About</MDBNavbarLink>
-                </MDBNavbarItem>
-                <MDBNavbarItem>
-                  {" "}
-                  <MDBNavbarLink href="contact">Contact</MDBNavbarLink>
-                </MDBNavbarItem>
-              </MDBNavbarNav>
-            </MDBCollapse>
-          </MDBContainer>
-        </MDBNavbar>
-
         <div
           className="p-5 text-center bg-image"
           style={{

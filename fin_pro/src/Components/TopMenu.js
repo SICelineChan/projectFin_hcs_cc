@@ -36,9 +36,14 @@ export default function TopMenu({ title }) {
 
         <MDBCollapse navbar show={showNavRight}>
           <MDBNavbarNav right fullWidth={false} className="mb-2 mb-lg-0">
-            <MDBNavbarItem>
+            {/* <MDBNavbarItem>
               <MDBNavbarLink active aria-current="page" href="/home">
-                Home
+                {title}
+              </MDBNavbarLink>
+            </MDBNavbarItem> */}
+            <MDBNavbarItem>
+              <MDBNavbarLink active aria-current="page" href="/dashboard">
+                Dashboard
               </MDBNavbarLink>
             </MDBNavbarItem>
 

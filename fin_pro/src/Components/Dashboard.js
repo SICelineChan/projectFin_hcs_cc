@@ -2,7 +2,6 @@ import React from "react";
 import Footer from "./Footer";
 
 import SideBarMenu from "./SideBarMenu";
-import TopMenu from "./TopMenu";
 
 export default function Dashboard() {
   const menu = [
@@ -12,11 +11,13 @@ export default function Dashboard() {
     { text: "About Me", aim: "about" },
     { text: "Contact", aim: "contact" },
     { text: "Map", aim: "map" },
+
+    { text: "Mexico", aim: "mexico" },
+    { text: "Japan", aim: "japan" },
   ];
   return (
     <div>
       <div className="d-flex flex-column">
-        <TopMenu title="Eat Noodles Go Travel!"></TopMenu>
         <SideBarMenu menu={menu} />
         <Footer></Footer>
       </div>
