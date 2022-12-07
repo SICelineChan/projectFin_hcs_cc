@@ -13,7 +13,6 @@ export default function Dashboard() {
     { text: "Map", aim: "map" },
 
     { text: "Mexico", aim: "mexico" },
-    { text: "Japan", aim: "japan" },
   ];
   return (
     <div>

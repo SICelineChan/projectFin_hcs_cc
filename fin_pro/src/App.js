@@ -7,14 +7,10 @@ import Dashboard from "./Components/Dashboard";
 import MapTest from "./Components/MapTest";
 import TopMenu from "./Components/TopMenu";
 import FetchMexicoApi from "./Components/FetchMexicoApi";
-// import FetchCountriesApi from "./Components/FetchCountriesApi";
 
 function App() {
   return (
     <div>
-      {/* <h6>
-        <Link href="/home">Home</Link>
-      </h6> */}
       <TopMenu title="Eat Noodles Go Travel!"></TopMenu>
       <Switch>
         <Route path="/home" component={Main}></Route>
@@ -24,6 +20,9 @@ function App() {
         <Route path="/mexico" component={FetchMexicoApi}></Route>
         <Route path="/mexico/:id">
           {(params) => <FetchMexicoApi id={params.id} />}
+        </Route>
+        <Route>
+          <Main />
         </Route>
       </Switch>
     </div>
