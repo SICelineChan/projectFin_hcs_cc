@@ -1,85 +1,27 @@
-import React from "react";
-import {
-  MDBCard,
-  MDBCardImage,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBRow,
-  MDBCol,
-} from "mdb-react-ui-kit";
+import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
-export default function PlaceCards() {
+function PlaceCards() {
   return (
-    <MDBRow className="row-cols-1 row-cols-md-3 g-4">
-      <MDBCol>
-        <MDBCard>
-          <MDBCardImage
-            src="https://mdbootstrap.com/img/new/standard/city/041.webp"
-            alt="..."
-            position="top"
-          />
-          <MDBCardBody>
-            <MDBCardTitle>1st Card title</MDBCardTitle>
-            <MDBCardText>
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-      <MDBCol>
-        <MDBCard>
-          <MDBCardImage
-            src="https://mdbootstrap.com/img/new/standard/city/042.webp"
-            alt="..."
-            position="top"
-          />
-          <MDBCardBody>
-            <MDBCardTitle>2nd Card title</MDBCardTitle>
-            <MDBCardText>
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-      <MDBCol>
-        <MDBCard>
-          <MDBCardImage
-            src="https://mdbootstrap.com/img/new/standard/city/043.webp"
-            alt="..."
-            position="top"
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
-            <MDBCardText>
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-      <MDBCol>
-        <MDBCard>
-          <MDBCardImage
-            src="https://mdbootstrap.com/img/new/standard/city/044.webp"
-            alt="..."
-            position="top"
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
-            <MDBCardText>
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-    </MDBRow>
+    <Row xs={1} md={2} classNameName="g-4">
+      {Array.from({ length: 4 }).map((_, idx) => (
+        <Col>
+          <Card>
+            <Card.Img variant="top" src="./Images/Madeira6Oct19.jpg" />
+            <Card.Body>
+              <Card.Title>Card title</Card.Title>
+              <Card.Text>
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
+    </Row>
   );
 }
+
+export default PlaceCards;

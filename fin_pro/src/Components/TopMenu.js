@@ -1,69 +1,57 @@
-import React, { useState } from "react";
-
-import {
-  MDBNavbar,
-  MDBContainer,
-  MDBIcon,
-  MDBNavbarBrand,
-  MDBNavbarNav,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBNavbarToggler,
-  MDBCollapse,
-  MDBDropdown,
-  MDBDropdownMenu,
-  MDBDropdownToggle,
-  MDBDropdownItem,
-} from "mdb-react-ui-kit";
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 export default function TopMenu({ title }) {
-  const [showNavRight, setShowNavRight] = useState(false);
+  // const [showNavRight, setShowNavRight] = useState(false);
 
   return (
-    <MDBNavbar expand="lg" light bgColor="light">
-      <MDBContainer fluid>
-        <MDBNavbarBrand href="#">{title}</MDBNavbarBrand>
-        <MDBNavbarToggler
-          type="button"
-          data-target="#navbarRightAlignExample"
-          aria-controls="navbarRightAlignExample"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          onClick={() => setShowNavRight(!showNavRight)}
-        >
-          <MDBIcon icon="bars" fas />
-        </MDBNavbarToggler>
-
-        <MDBCollapse navbar show={showNavRight}>
-          <MDBNavbarNav right fullWidth={false} className="mb-2 mb-lg-0">
-            {/* <MDBNavbarItem>
-              <MDBNavbarLink active aria-current="page" href="/home">
-                {title}
-              </MDBNavbarLink>
-            </MDBNavbarItem> */}
-            <MDBNavbarItem>
-              <MDBNavbarLink active aria-current="page" href="/dashboard">
-                Dashboard
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-
-            <MDBNavbarItem>
-              <MDBDropdown>
-                <MDBDropdownToggle tag="a" className="nav-link">
-                  Locations
-                </MDBDropdownToggle>
-                <MDBDropdownMenu>
-                  <MDBDropdownItem link>Deck of Places</MDBDropdownItem>
-                  <MDBDropdownItem link href="/map">
-                    Maps
-                  </MDBDropdownItem>
-                  <MDBDropdownItem link>New Post</MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavbarItem>
-          </MDBNavbarNav>
-        </MDBCollapse>
-      </MDBContainer>
-    </MDBNavbar>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Container>
+        <nav className="navbar navbar-light ">
+          <a className="navbar-brand" href="/home">
+            <img
+              src="./Images/noodleppl.png"
+              width="60px"
+              height="40px"
+              alt="logo"
+            />
+          </a>
+        </nav>
+        <Navbar.Brand href="#home">{title}</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+            <Nav.Link href="/locations">Locations</Nav.Link>
+            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Nav>
+            <Nav.Link href="/mexico">
+              <button type="button" className="btn btn-primary btn-sm">
+                Mexico
+              </button>
+            </Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
+              <button type="button" className="btn btn-primary btn-sm">
+                Sign In
+              </button>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }

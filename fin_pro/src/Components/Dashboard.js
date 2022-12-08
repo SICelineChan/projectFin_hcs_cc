@@ -10,13 +10,13 @@ export default function Dashboard() {
     { text: "Dashboard", aim: "dashboard" },
     { text: "About Me", aim: "about" },
     { text: "Contact", aim: "contact" },
-    { text: "Map", aim: "map" },
+    // { text: "Map", aim: "map" },
 
     { text: "Mexico", aim: "mexico" },
   ];
   return (
     <div>
-      <div className="d-flex flex-column">
+      <div classNameName="d-flex flex-column">
         <SideBarMenu menu={menu} />
         <Footer></Footer>
       </div>

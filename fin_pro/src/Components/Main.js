@@ -1,38 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { MDBBtn } from "mdb-react-ui-kit";
 import Footer from "./Footer";
 
 export default function Main() {
-  const [showBasic, setShowBasic] = useState(false);
+  // const [showBasic, setShowBasic] = useState(false);
 
   return (
     <>
-      <header>
-        <div
-          className="p-5 text-center bg-image"
-          style={{
-            backgroundImage: "url('/Images/Madeira6Oct19.jpg')",
-            marginTop: "16px",
-            height: "600px",
-          }}
-        >
-          <div
-            className="mask"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
-          >
-            <div className="d-flex justify-content-center align-items-center h-100">
-              <div className="text-white">
-                <h1 className="mb-3">Eat Noodles! Go Travel</h1>
-                <h4 className="mb-3">Find your Noodles</h4>
-                <MDBBtn tag="a" outline size="lg">
-                  Fulfill your noodle desire!
-                </MDBBtn>
-              </div>
-            </div>
-          </div>
+      <body
+        className="d-flex h-100 text-center text-bg-dark"
+        style={{
+          backgroundImage: "url(/Images/Ire30Aug16_mod.jpg)",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          height: "100%",
+        }}
+      >
+        <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+          <main className="px-3">
+            <h1>Cover your page.</h1>
+            <p className="lead">
+              Cover is a one-page template for building simple and beautiful
+              home pages. Download, edit the text, and add your own fullscreen
+              background photo to make it your own.
+            </p>
+            <p className="lead">
+              <a
+                href="/"
+                className="btn btn-lg btn-secondary fw-bold border-white bg-white"
+              >
+                Learn more
+              </a>
+            </p>
+          </main>
         </div>
-      </header>
+      </body>
       <Footer></Footer>
     </>
   );

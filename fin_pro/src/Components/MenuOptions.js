@@ -1,12 +1,12 @@
 import React from "react";
-import { MDBBtn } from "mdb-react-ui-kit";
+import Button from "react-bootstrap/Button";
 
 export default function MenuOptions({ text, onClick }) {
   return (
     <div>
-      <MDBBtn onClick={onClick} color="link" rippleColor="dark">
+      <Button onClick={onClick} color="link" rippleColor="dark">
         {text}
-      </MDBBtn>
+      </Button>
     </div>
   );
 }
