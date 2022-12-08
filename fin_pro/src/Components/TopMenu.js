@@ -37,19 +37,39 @@ export default function TopMenu({ title }) {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+              className="rounded-circle"
+              height="32px"
+              alt="Avatar"
+            />
           </Nav>
-          <Nav>
+
+          {/* <Nav>
             <Nav.Link href="/mexico">
               <button type="button" className="btn btn-primary btn-sm">
                 Mexico
               </button>
             </Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link href="/mexico">
               <button type="button" className="btn btn-primary btn-sm">
                 Sign In
               </button>
             </Nav.Link>
+            <Nav.Link href="/">
+              <button type="button" className="btn btn-primary btn-sm">
+                New Post
+              </button>
+            </Nav.Link> */}
+
+          <Nav>
+            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
+              Dank memes
+            </Nav.Link>
           </Nav>
+
+          {/* </Nav> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
