@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
-// import SideBarMenu from "./SideBarMenu";
-import TopMenu from "./TopMenu";
+
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+
 mapboxgl.accessToken =
   "pk.eyJ1Ijoibm9vZGxlcGVvcGxlIiwiYSI6ImNsYjVnMGdxNjA0dnAzb3BnZ3FkY2Vzc28ifQ.7czpNqgMmo3nEf4svBfp3A";
 export default function MapTest() {
@@ -22,9 +22,8 @@ export default function MapTest() {
   });
   return (
     <div>
-      <TopMenu title="Eat Noodles Go Travel!"></TopMenu>
       {/* <SideBarMenu menu={menu} /> */}
-      <h2>Where do you want to travel next?</h2>
+
       <div ref={mapContainer} className="map-container" />
     </div>
   );

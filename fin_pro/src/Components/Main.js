@@ -1,16 +1,6 @@
 import React, { useState } from "react";
 
-import {
-  MDBNavbar,
-  MDBNavbarNav,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBNavbarToggler,
-  MDBContainer,
-  MDBIcon,
-  MDBCollapse,
-  MDBBtn,
-} from "mdb-react-ui-kit";
+import { MDBBtn } from "mdb-react-ui-kit";
 import Footer from "./Footer";
 
 export default function Main() {
