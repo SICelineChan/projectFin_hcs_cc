@@ -63,9 +63,9 @@ export default function TopMenu({ title }) {
             </Nav.Link> */}
 
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link href="#deets">New Post</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
-              Dank memes
+              Sign In
             </Nav.Link>
           </Nav>
 
