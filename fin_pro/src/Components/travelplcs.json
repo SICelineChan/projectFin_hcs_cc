@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "country": "South Korea",
+    "city": "Jeju Island",
+    "imageUrl": "/Images/jigu.jpg",
+    "visitdate": "12-12-2016",
+    "longitude": "126.5100",
+    "latitude": "33.4974 "
+  },
+  {
+    "id": "2",
+    "country": "Japan",
+    "city": "Osaka",
+    "imageUrl": "/Images/osaka.jpg",
+    "visitdate": "05-12-2016",
+    "longitude": "135.5164",
+    "latitude": "34.6831"
+  },
+  {
+    "id": "3",
+    "country": "Ireland",
+    "city": "Donegal",
+    "imageUrl": "/Images/ireland.jpg",
+    "visitdate": "15-10-2017",
+    "longitude": "-8.1151",
+    "latitude": "54.6547"
+  },
+  {
+    "id": "4",
+    "country": "Portugal",
+    "city": "Funchal",
+    "imageUrl": "/Images/Madeira.jpg",
+    "visitdate": "06-10-2019",
+    "longitude": "-16.9121",
+    "latitude": "32.6886"
+  },
+  {
+    "id": "5",
+    "country": "Mexico",
+    "city": "Merida",
+    "imageUrl": "/Images/yuca.jpg",
+    "visitdate": "28-04-2022",
+    "longitude": "-89.6191",
+    "latitude": "20.9708 "
+  }
+]

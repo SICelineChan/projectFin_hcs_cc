@@ -10,15 +10,15 @@ export default function MarkerMap() {
   return (
     <Map
       initialViewState={{
-        longitude: -122.4,
-        latitude: 37.8,
-        zoom: 14,
+        longitude: 1.7185,
+        latitude: 51.3276,
+        zoom: 1,
       }}
       style={{ position: "relative", width: "100%", height: "100%" }}
       mapStyle="mapbox://styles/mapbox/streets-v12"
       mapboxAccessToken={myToken}
     >
-      <Marker longitude={-122.4} latitude={37.8} color="red" />
+      <Marker longitude={1.7185} latitude={51.3276} color="red" />
     </Map>
   );
 }

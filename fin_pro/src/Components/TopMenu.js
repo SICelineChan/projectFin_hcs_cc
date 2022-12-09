@@ -1,4 +1,5 @@
 import React from "react";
+
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -9,7 +10,7 @@ export default function TopMenu({ title }) {
 
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
+      <Container fluid="sm">
         <nav className="navbar navbar-light ">
           <a className="navbar-brand" href="/home">
             <img
@@ -26,8 +27,9 @@ export default function TopMenu({ title }) {
           <Nav className="me-auto">
             <Nav.Link href="/dashboard">Dashboard</Nav.Link>
             <Nav.Link href="/locations">Locations</Nav.Link>
+
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"></NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
@@ -38,9 +40,9 @@ export default function TopMenu({ title }) {
               </NavDropdown.Item>
             </NavDropdown>
             <img
-              src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+              src="/Images/me.JPG"
               className="rounded-circle"
-              height="32px"
+              height="42px"
               alt="Avatar"
             />
           </Nav>

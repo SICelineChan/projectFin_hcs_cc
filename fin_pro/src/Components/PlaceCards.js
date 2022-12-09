@@ -1,27 +1,24 @@
 import Card from "react-bootstrap/Card";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 
-function PlaceCards() {
+import Row from "react-bootstrap/Row";
+import CardGroup from "react-bootstrap/CardGroup";
+
+export default function PlaceCards({ country, city, visitdate, imageUrl }) {
   return (
-    <Row xs={1} md={2} classNameName="g-4">
-      {Array.from({ length: 4 }).map((_, idx) => (
-        <Col>
+    <>
+      <Row xs={1} md={2} classNameName="g-4">
+        <CardGroup>
           <Card>
-            <Card.Img variant="top" src="./Images/Madeira6Oct19.jpg" />
+            <Card.Img variant="top" src={imageUrl} style={{ width: "16rem" }} />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>{country}</Card.Title>
               <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                We travelled to {city} on {visitdate}. For more detail go here:
               </Card.Text>
             </Card.Body>
           </Card>
-        </Col>
-      ))}
-    </Row>
+        </CardGroup>
+      </Row>
+    </>
   );
 }
-
-export default PlaceCards;

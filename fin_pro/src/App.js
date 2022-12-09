@@ -8,6 +8,7 @@ import Dashboard from "./Components/Dashboard";
 import TopMenu from "./Components/TopMenu";
 import FetchMexicoApi from "./Components/FetchMexicoApi";
 import MarkerMap from "./Components/MarkerMap";
+import MultiMarker from "./Components/MultiMarker";
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
         <Route path="/home" component={Main}></Route>
         <Route path="/dashboard" component={Dashboard}></Route>
 
-        <Route path="/locations" component={MarkerMap}></Route>
-
+        <Route path="/locations" component={MultiMarker}></Route>
+        <Route path="/multi" component={MarkerMap}></Route>
         <Route path="/mexico" component={FetchMexicoApi}></Route>
         <Route path="/mexico/:id">
           {(params) => <FetchMexicoApi id={params.id} />}

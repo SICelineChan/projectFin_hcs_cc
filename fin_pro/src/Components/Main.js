@@ -10,7 +10,7 @@ export default function Main() {
       <body
         className="d-flex h-100 text-center text-bg-dark"
         style={{
-          backgroundImage: "url(/Images/Ire30Aug16_mod.jpg)",
+          backgroundImage: "url(/Images/Mex.jpg)",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           height: "100%",
