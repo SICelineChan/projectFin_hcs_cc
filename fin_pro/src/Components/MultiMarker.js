@@ -76,6 +76,7 @@ export default function MultiMarker() {
               >
                 Wikipedia
               </a>
+              <br></br>
               <a
                 target="_new"
                 href={`http://localhost:3000/blog/${popupInfo.id}`}
