@@ -2,7 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Footer from "./Footer";
 
-export default function Main() {
+export default function HeadHome() {
   // const [showBasic, setShowBasic] = useState(false);
 
   return (

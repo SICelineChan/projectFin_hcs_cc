@@ -1,6 +1,7 @@
 [
   {
     "id": "1",
+    "author": "Celine",
     "country": "South Korea",
     "city": "Jeju Island",
     "imageUrl": "/Images/jigu.jpg",
@@ -10,6 +11,7 @@
   },
   {
     "id": "2",
+    "author": "Celine",
     "country": "Japan",
     "city": "Osaka",
     "imageUrl": "/Images/osaka.jpg",
@@ -19,6 +21,7 @@
   },
   {
     "id": "3",
+    "author": "Celine",
     "country": "Ireland",
     "city": "Donegal",
     "imageUrl": "/Images/ireland.jpg",
@@ -28,6 +31,7 @@
   },
   {
     "id": "4",
+    "author": "Celine",
     "country": "Portugal",
     "city": "Funchal",
     "imageUrl": "/Images/Madeira.jpg",
@@ -37,6 +41,7 @@
   },
   {
     "id": "5",
+    "author": "Celine",
     "country": "Mexico",
     "city": "Merida",
     "imageUrl": "/Images/yuca.jpg",

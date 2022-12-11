@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState, useMemo } from "react";
+
 import Map, {
   Marker,
   Popup,
@@ -29,8 +30,6 @@ export default function MultiMarker() {
           latitude={places.latitude}
           anchor="bottom"
           onClick={(e) => {
-            // If we let the click event propagates to the map, it will immediately close the popup
-            // with `closeOnClick: true`
             e.originalEvent.stopPropagation();
             setPopupInfo(places);
           }}
@@ -69,7 +68,16 @@ export default function MultiMarker() {
             onClose={() => setPopupInfo(null)}
           >
             <div>
-              {popupInfo.city}, {popupInfo.country} |{" "}
+              Author: {popupInfo.author} | Country:{popupInfo.country}
+              <br></br>
+              Visited on:{popupInfo.visitdate} <br></br>
+              <a
+                target="_new"
+                href={`http://localhost:3000/blog/${popupInfo.id}`}
+              >
+                blog
+              </a>
+              <br></br>
               <a
                 target="_new"
                 href={`http://en.wikipedia.org/w/index.php?title=Special:Search&search=${popupInfo.city}, ${popupInfo.country}`}
@@ -77,14 +85,8 @@ export default function MultiMarker() {
                 Wikipedia
               </a>
               <br></br>
-              <a
-                target="_new"
-                href={`http://localhost:3000/blog/${popupInfo.id}`}
-              >
-                My blog
-              </a>
             </div>
-            <img width="80%" src={popupInfo.imageUrl} alt="some img" />
+            <img width="100%" src={popupInfo.imageUrl} alt="some img" />
           </Popup>
         )}
       </Map>
