@@ -1,10 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-import Footer from "./Footer";
 
 export default function HeadHome() {
-  // const [showBasic, setShowBasic] = useState(false);
-
   return (
     <>
       <body
@@ -24,15 +21,10 @@ export default function HeadHome() {
               <Button variant="outline-light" href="/dashboard">
                 Let's Roll!
               </Button>
-              {/* <a
-                href="/dashboard"
-                className="btn btn-lg btn-secondary fw-bold border-white bg-white"
-              ></a> */}
             </p>
           </main>
         </div>
       </body>
-      <Footer></Footer>
     </>
   );
 }

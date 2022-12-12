@@ -9,19 +9,25 @@ export default function TopMenu({ title }) {
   // const [showNavRight, setShowNavRight] = useState(false);
   const [show, setShow] = useState(false);
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      style={{ backgroundColor: "#748DA6" }}
+      variant="dark"
+    >
       <Container fluid="sm">
-        <nav className="navbar navbar-light ">
+        <Nav>
           <a className="navbar-brand" href="/home">
             <img
-              src="./Images/noodleppl.png"
-              width="60px"
-              height="40px"
+              src="./Images/noodleNoBG.png"
+              width="90px"
+              height="60px"
+              className="rounded"
               alt="logo"
             />
           </a>
-        </nav>
-        <Navbar.Brand href="#home">{title}</Navbar.Brand>
+        </Nav>
+        <Navbar.Brand href="/home">{title}</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -31,16 +37,15 @@ export default function TopMenu({ title }) {
 
           <Nav>
             <Nav.Link href="/about">
-              {" "}
               <img
                 src="/Images/me.JPG"
                 className="rounded-circle"
-                height="42px"
+                height="50px"
                 alt="Avatar"
               />
             </Nav.Link>
-            <Nav.Link href="#deets">New Post</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link href="/newpost">New Post</Nav.Link>
+            <Nav.Link eventKey={2} href="/signin">
               <SignInPage></SignInPage>
             </Nav.Link>
           </Nav>

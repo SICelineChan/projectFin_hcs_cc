@@ -1,7 +1,9 @@
+import { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import CardGroup from "react-bootstrap/CardGroup";
-import { Route } from "wouter";
+import { Link } from "wouter";
+
 import NextBlog from "./NextBlog";
 
 export default function PlaceCards({ id, country, city, visitdate, imageUrl }) {
@@ -21,7 +23,7 @@ export default function PlaceCards({ id, country, city, visitdate, imageUrl }) {
                 We travelled to {city} on {visitdate}. For more detail go here:
               </Card.Text>
               <Card.Text>
-                <a href="/blog">Blog</a>
+                <Link href={`/blog/${id}`}>Blog</Link>
               </Card.Text>
             </Card.Body>
           </Card>

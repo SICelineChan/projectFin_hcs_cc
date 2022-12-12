@@ -1,20 +1,28 @@
 import { useState } from "react";
 import Container from "react-bootstrap/esm/Container";
-import travelplcs from "./travelplcs.json";
 
-export default function NextBlog() {
+export default function NextBlog({ id, travelplcs }) {
   const [index, setIndex] = useState(0);
-  const [showMore, setShowMore] = useState(false);
+  const blog = travelplcs[id];
+  let num = travelplcs[index];
+  console.log(blog);
+  console.log(num);
+  // for (let i = 0; i < blog.length; i++) {
+  //   console.log(blog[2]);
+  // }
 
   function handleNextClick() {
     setIndex(index + 1);
+    // if (id > id.lenght) {
+    //   id = setIndex(0);
+    // }
+    return;
   }
 
-  function handleMoreClick() {
-    setShowMore(!showMore);
+  function handleGoBackClick() {
+    setIndex(index - 1);
   }
 
-  let blog = travelplcs[index];
   return (
     <>
       <div>
@@ -30,14 +38,10 @@ export default function NextBlog() {
             </div>
           </div>
           <button onClick={handleNextClick}>Next</button>
-
           <h3>
-            ({index + 1} of {travelplcs.length})
+            ({index + 1} of {num.length})
           </h3>
-          <button onClick={handleMoreClick}>
-            {showMore ? "Hide" : "Show"} details
-          </button>
-          {showMore && <p>{blog.visitdate}</p>}
+          <button onClick={handleGoBackClick}>Back</button>
           <div className="row mb-2">
             <div className="col-md-6">
               <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -46,7 +50,7 @@ export default function NextBlog() {
                     Explore
                   </strong>
                   <h3 className="mb-0">{blog.country}</h3>
-                  <div className="mb-1 text-muted">Nov 12</div>
+                  <div className="mb-1 text-muted">{blog.visitdate}</div>
                   <p className="card-text mb-auto">
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content.
@@ -88,7 +92,7 @@ export default function NextBlog() {
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content.
                   </p>
-                  <a href="#" className="stretched-link">
+                  <a href="/" className="stretched-link">
                     Continue reading
                   </a>
                 </div>
@@ -113,7 +117,6 @@ export default function NextBlog() {
               </div>
             </div>
           </div>
-
           <div className="row g-5">
             <div className="col-md-8">
               <h3 className="pb-4 mb-4 fst-italic border-bottom">
@@ -226,31 +229,6 @@ export default function NextBlog() {
                   lookout for this exact same string of text.
                 </p>
 
-                <p>
-                  This is some additional paragraph placeholder content. It's a
-                  slightly shorter version of the other highly repetitive body
-                  text used throughout.
-                </p>
-              </article>
-
-              <article className="blog-post">
-                <h2 className="blog-post-title mb-1">New feature</h2>
-                <p className="blog-post-meta">
-                  December 14, 2022 by <a href="/about">{blog.author}</a>
-                </p>
-
-                <p>
-                  This is some additional paragraph placeholder content. It has
-                  been written to fill the available space and show how a longer
-                  snippet of text affects the surrounding content. We'll repeat
-                  it often to keep the demonstration flowing, so be on the
-                  lookout for this exact same string of text.
-                </p>
-                <ul>
-                  <li>First list item</li>
-                  <li>Second list item with a longer description</li>
-                  <li>Third list item to close it out</li>
-                </ul>
                 <p>
                   This is some additional paragraph placeholder content. It's a
                   slightly shorter version of the other highly repetitive body

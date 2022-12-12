@@ -1,6 +1,4 @@
-import * as React from "react";
-import { useState, useMemo } from "react";
-
+import React, { useState, useMemo } from "react";
 import Map, {
   Marker,
   Popup,
@@ -9,16 +7,17 @@ import Map, {
   ScaleControl,
   GeolocateControl,
 } from "react-map-gl";
-
-import ControlPanel from "./ControlPanel";
 import Pin from "./Pin";
+import ControlPanel from "./ControlPanel";
 
 import travelplcs from "./travelplcs.json";
 
-const TOKEN =
+import "mapbox-gl/dist/mapbox-gl.css";
+
+const myToken =
   "pk.eyJ1Ijoibm9vZGxlcGVvcGxlIiwiYSI6ImNsYmR4Z3VxazAyN2kzcG55Nno2bTBtZmMifQ.tMJhZlbKAf53O4lJ82dzAA";
 
-export default function MultiMarker() {
+export default function DashMaps() {
   const [popupInfo, setPopupInfo] = useState(null);
 
   const pins = useMemo(
@@ -41,7 +40,7 @@ export default function MultiMarker() {
   );
 
   return (
-    <>
+    <div style={{ width: "500px", height: "400px" }}>
       <Map
         initialViewState={{
           latitude: 50.477,
@@ -50,8 +49,8 @@ export default function MultiMarker() {
           bearing: 0,
           pitch: 0,
         }}
-        mapStyle="mapbox://styles/mapbox/dark-v9"
-        mapboxAccessToken={TOKEN}
+        mapStyle="mapbox://styles/mapbox/streets-v12"
+        mapboxAccessToken={myToken}
       >
         <GeolocateControl position="top-left" />
         <FullscreenControl position="top-left" />
@@ -73,12 +72,6 @@ export default function MultiMarker() {
               Visited on:{popupInfo.visitdate} <br></br>
               <a href={`http://localhost:3000/blog/${popupInfo.id}`}>blog</a>
               <br></br>
-              <a
-                target="_new"
-                href={`http://en.wikipedia.org/w/index.php?title=Special:Search&search=${popupInfo.city}, ${popupInfo.country}`}
-              >
-                Wikipedia
-              </a>
               <br></br>
             </div>
             <img width="100%" src={popupInfo.imageUrl} alt="some img" />
@@ -87,6 +80,6 @@ export default function MultiMarker() {
       </Map>
 
       <ControlPanel />
-    </>
+    </div>
   );
 }

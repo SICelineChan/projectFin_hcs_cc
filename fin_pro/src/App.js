@@ -6,12 +6,12 @@ import { Switch, Route } from "wouter";
 import Dashboard from "./Components/Dashboard";
 
 import TopMenu from "./Components/TopMenu";
-import FetchMexicoApi from "./Components/FetchMexicoApi";
+import ContactPage from "./Components/ContactPage";
 import MarkerMap from "./Components/MarkerMap";
 import MultiMarker from "./Components/MultiMarker";
 import About from "./Components/About";
 import Footer from "./Components/Footer";
-// import BlogPage from "./Components/BlogPage";
+import travelplcs from "./Components/travelplcs.json";
 import NextBlog from "./Components/NextBlog";
 
 function App() {
@@ -24,15 +24,13 @@ function App() {
         <Route path="/dashboard" component={Dashboard}></Route>
         <Route path="/locations" component={MultiMarker}></Route>
         <Route path="/about" component={About}></Route>
-        <Route path="/multi" component={MarkerMap}></Route>
+        <Route path="/contact" component={ContactPage}></Route>
+        <Route path="/newpost" component={MarkerMap}></Route>
         <Route path="/blog" component={NextBlog}></Route>
 
         <Route path="/blog/:id">
-          {(params) => <NextBlog Id={params.id} />}
+          {(params) => <NextBlog id={params.id} travelplcs={travelplcs} />}
         </Route>
-
-        <Route path="/mexico" component={FetchMexicoApi}></Route>
-        {/* {(params) => <Blogpost use .findIndex id={params.id} />} */}
 
         <Route>
           <HeadHome />
