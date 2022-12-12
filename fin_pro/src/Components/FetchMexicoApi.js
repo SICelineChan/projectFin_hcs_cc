@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 
-import Card from "react-bootstrap/Card";
-
 function FetchMexicoApi({ id: countryId }) {
   const [country, setCountry] = useState({});
   const [fetchError, setFetchError] = useState(false);
@@ -47,14 +45,13 @@ function FetchMexicoApi({ id: countryId }) {
 
   return (
     !fetchError && (
-      <Card style={{ width: "20rem" }}>
-        <Card.Body>
-          <Card.Title>{country.nameOfficial}</Card.Title>
+      <div style={{ width: "24rem" }}>
+        <br></br>
+        <h1>{country.nameOfficial}</h1>
 
-          <Card.Text>{country.capital}</Card.Text>
-          <Card.Img variant="top" img src={country.flag} />
-        </Card.Body>
-      </Card>
+        <h2>{country.capital}</h2>
+        <img variant="top" img src={country.flag} alt="flag" />
+      </div>
     )
   );
 }
