@@ -1,10 +1,7 @@
-import { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import CardGroup from "react-bootstrap/CardGroup";
 import { Link } from "wouter";
-
-import NextBlog from "./NextBlog";
 
 export default function PlaceCards({ id, country, city, visitdate, imageUrl }) {
   return (
