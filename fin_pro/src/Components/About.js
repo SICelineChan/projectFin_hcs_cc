@@ -1,44 +1,58 @@
 import React from "react";
-import Row from "react-bootstrap/esm/Row";
-import Col from "react-bootstrap/esm/Col";
+import Container from "react-bootstrap/esm/Container";
 import SideBarMenu from "./SideBarMenu";
-import Card from "react-bootstrap/Card";
-import Footer from "./Footer";
 
 const menu = [
   { text: "Home", aim: "home" },
   { text: "Locations", aim: "locations" },
   { text: "Dashboard", aim: "dashboard" },
   { text: "About Me", aim: "about" },
-  { text: "My homes", aim: "multi" },
-  { text: "Mexico", aim: "mexico" },
+  { text: "New Post", aim: "multi" },
   { text: "Contact", aim: "contact" },
+  { text: "Main Blog", aim: "blog" },
 ];
 
 export default function About() {
   return (
     <>
-      <div>
-        <Row>
-          <Col sm={2}>
-            <SideBarMenu menu={menu} />
-          </Col>
-          <Col sm={10}>
-            <div className="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-              <Card className="text-center" style={{ width: "70rem" }}>
-                <Card.Body>
-                  <Card.Title>Hello</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    I am Celine
-                  </Card.Subtitle>
-                  <Card.Text>Here will be some text...</Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          </Col>
-        </Row>
-      </div>
-      <Footer></Footer>
+      <Container>
+        <div className="nav-scroller py-1 mb-2">
+          <nav className="d-flex gap-2 justify-content-md-center">
+            <SideBarMenu className="py-2" menu={menu} />
+          </nav>
+        </div>
+      </Container>
+
+      <hr></hr>
+      <Container>
+        <div className="row featurette">
+          <div className="col-md-7">
+            <h2 className="featurette-heading fw-normal lh-1">
+              About <span className="text-muted">...this project</span>
+            </h2>
+            <p className="lead">
+              Hey, glad you click here! I am Celine. This is the final project
+              for the full stack course at Hamburg Coding School.
+            </p>
+            <h4 className="featurette-heading fw-normal lh-1">
+              What about <span className="text-muted">...this photo?</span>
+            </h4>
+            <p className="lead">
+              The best noodle breakfast! It has all the flavours, sweet, salty,
+              sour and bitter (the coffee! ☕)
+            </p>
+          </div>
+          <div className="col-md-5">
+            <img
+              src="./Images/noobfast.jpg"
+              className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+              width="400"
+              height="400"
+              alt="rice noodle breakfast"
+            />
+          </div>
+        </div>
+      </Container>
     </>
   );
 }
