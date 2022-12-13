@@ -1,8 +1,10 @@
 [
   {
-    "id": "0",
+    "id": "1",
     "author": "Celine",
     "country": "South Korea",
+    "countryLongitude": "127.7153",
+    "countryLatitude": "36.0965",
     "city": "Jeju Island",
     "imageUrl": "/Images/jigu.jpg",
     "visitdate": "12-07-2015",
@@ -10,9 +12,11 @@
     "latitude": "33.4974 "
   },
   {
-    "id": "1",
+    "id": "2",
     "author": "Celine",
     "country": "Japan",
+    "countryLongitude": "138.8293",
+    "countryLatitude": "36.6888",
     "city": "Osaka",
     "imageUrl": "/Images/osaka.jpg",
     "visitdate": "05-07-2016",
@@ -20,9 +24,11 @@
     "latitude": "34.6831"
   },
   {
-    "id": "2",
-    "author": "Celine",
+    "id": "3",
+    "author": "Steffi",
     "country": "Ireland",
+    "countryLongitude": "-6.8938",
+    "countryLatitude": "53.2055",
     "city": "Donegal",
     "imageUrl": "/Images/ireland.jpg",
     "visitdate": "15-10-2017",
@@ -30,9 +36,11 @@
     "latitude": "54.6547"
   },
   {
-    "id": "3",
-    "author": "Celine",
+    "id": "4",
+    "author": "Steffi",
     "country": "Portugal",
+    "countryLongitude": "-8.8646",
+    "countryLatitude": "39.2045",
     "city": "Funchal",
     "imageUrl": "/Images/Madeira.jpg",
     "visitdate": "06-10-2019",
@@ -40,9 +48,11 @@
     "latitude": "32.6886"
   },
   {
-    "id": "4",
+    "id": "5",
     "author": "Celine",
     "country": "Mexico",
+    "countryLongitude": "-99.3269",
+    "countryLatitude": "18.9329",
     "city": "Merida",
     "imageUrl": "/Images/yuca.jpg",
     "visitdate": "28-04-2022",
@@ -50,13 +60,15 @@
     "latitude": "20.9708 "
   },
   {
-    "id": "5",
+    "id": "6",
     "author": "Celine",
-    "country": "UK",
-    "city": "London",
+    "country": "Vietnam",
+    "countryLongitude": "108.6543",
+    "countryLatitude": "13.9581",
+    "city": "Hanoi",
     "imageUrl": "/Images/irerock.jpg",
     "visitdate": "28-05-2022",
-    "longitude": "1.7185",
-    "latitude": "51.3276 "
+    "longitude": "105.804817",
+    "latitude": "21.028511 "
   }
 ]

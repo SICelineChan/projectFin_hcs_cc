@@ -1,12 +1,19 @@
 import { useState } from "react";
 import Container from "react-bootstrap/esm/Container";
+import Map, { Marker } from "react-map-gl";
 
+import "mapbox-gl/dist/mapbox-gl.css";
+// import travelplcs from "./travelplcs.json";
+const myToken =
+  "pk.eyJ1Ijoibm9vZGxlcGVvcGxlIiwiYSI6ImNsYmR4Z3VxazAyN2kzcG55Nno2bTBtZmMifQ.tMJhZlbKAf53O4lJ82dzAA";
 export default function NextBlog({ id, travelplcs }) {
   const [index, setIndex] = useState(0);
   const blog = travelplcs[id];
-  let num = travelplcs[index];
-  console.log(blog);
-  console.log(num);
+  console.log(blog.country);
+  // let num = travelplcs[index];
+  // console.log(num);
+
+  // console.log(num);
   // for (let i = 0; i < blog.length; i++) {
   //   console.log(blog[2]);
   // }
@@ -31,7 +38,7 @@ export default function NextBlog({ id, travelplcs }) {
             <div className="col-md-6 px-0">
               <h1 className="display-4 fst-italic">Blog Posts</h1>
               <h2>
-                <i>{blog.country} </i>
+                <i>{blog.name} </i>
                 and the name of the city is {blog.city}
               </h2>
               <p className="lead my-3"></p>
@@ -39,7 +46,7 @@ export default function NextBlog({ id, travelplcs }) {
           </div>
           <button onClick={handleNextClick}>Next</button>
           <h3>
-            ({index + 1} of {num.length})
+            ({index + 1} of {blog.length})
           </h3>
           <button onClick={handleGoBackClick}>Back</button>
           <div className="row mb-2">
@@ -51,31 +58,37 @@ export default function NextBlog({ id, travelplcs }) {
                   </strong>
                   <h3 className="mb-0">{blog.country}</h3>
                   <div className="mb-1 text-muted">{blog.visitdate}</div>
-                  <p className="card-text mb-auto">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content.
-                  </p>
+                  <p className="card-text mb-auto">Read about the country</p>
                   <a href="/blog/:{id}" className="stretched-link">
                     Continue reading
                   </a>
                 </div>
                 <div className="col-auto d-none d-lg-block">
-                  <svg
-                    className="bd-placeholder-img"
-                    width="200"
-                    height="250"
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    aria-label="Placeholder: Thumbnail"
-                    preserveAspectRatio="xMidYMid slice"
-                    focusable="false"
+                  <div
+                    style={{ width: "400px", height: "300px" }}
+                    className="float-center"
                   >
-                    <title>Features</title>
-                    <rect width="100%" height="100%" fill="#55595c"></rect>
-                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                      Thumbnail
-                    </text>
-                  </svg>
+                    <Map
+                      style={{
+                        position: "relative",
+                        width: "100%",
+                        height: "100%",
+                      }}
+                      mapStyle="mapbox://styles/mapbox/streets-v12"
+                      mapboxAccessToken={myToken}
+                      initialViewState={{
+                        longitude: blog.countryLongitude,
+                        latitude: blog.countryLatitude,
+                        zoom: 1,
+                      }}
+                    >
+                      <Marker
+                        longitude={blog.longitude}
+                        latitude={blog.latitude}
+                        color="red"
+                      />
+                    </Map>
+                  </div>
                 </div>
               </div>
             </div>
@@ -88,31 +101,37 @@ export default function NextBlog({ id, travelplcs }) {
                   </strong>
                   <h3 className="mb-0">{blog.city}</h3>
                   <div className="mb-1 text-muted">Nov 11</div>
-                  <p className="mb-auto">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content.
-                  </p>
+                  <p className="mb-auto">Read about the location!</p>
                   <a href="/" className="stretched-link">
                     Continue reading
                   </a>
                 </div>
                 <div className="col-auto d-none d-lg-block">
-                  <svg
-                    className="bd-placeholder-img"
-                    width="200"
-                    height="250"
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    aria-label="Placeholder: Thumbnail"
-                    preserveAspectRatio="xMidYMid slice"
-                    focusable="false"
+                  <div
+                    style={{ width: "400px", height: "300px" }}
+                    className="float-center"
                   >
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#55595c"></rect>
-                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                      Thumbnail
-                    </text>
-                  </svg>
+                    <Map
+                      style={{
+                        position: "relative",
+                        width: "100%",
+                        height: "100%",
+                      }}
+                      mapStyle="mapbox://styles/mapbox/streets-v12"
+                      mapboxAccessToken={myToken}
+                      initialViewState={{
+                        longitude: blog.longitude,
+                        latitude: blog.latitude,
+                        zoom: 9,
+                      }}
+                    >
+                      <Marker
+                        longitude={blog.longitude}
+                        latitude={blog.latitude}
+                        color="red"
+                      />
+                    </Map>
+                  </div>
                 </div>
               </div>
             </div>
@@ -120,7 +139,7 @@ export default function NextBlog({ id, travelplcs }) {
           <div className="row g-5">
             <div className="col-md-8">
               <h3 className="pb-4 mb-4 fst-italic border-bottom">
-                From the Firehose
+                {blog.country}
               </h3>
 
               <article className="blog-post">
@@ -240,9 +259,12 @@ export default function NextBlog({ id, travelplcs }) {
                 <a className="btn btn-outline-primary rounded-pill" href="/">
                   Older
                 </a>
-                {/* <a className="btn btn-outline-secondary rounded-pill disabled">
+                <a
+                  className="btn btn-outline-secondary rounded-pill disabled"
+                  href="/"
+                >
                   Newer
-                </a> */}
+                </a>
               </nav>
             </div>
 

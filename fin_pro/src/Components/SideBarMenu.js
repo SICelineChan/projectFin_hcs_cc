@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "wouter";
-
 import MenuOptions from "./MenuOptions";
 
 export default function SideBarMenu({ menu }) {

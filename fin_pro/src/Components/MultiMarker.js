@@ -9,7 +9,7 @@ import Map, {
   ScaleControl,
   GeolocateControl,
 } from "react-map-gl";
-
+import { Link } from "wouter";
 import ControlPanel from "./ControlPanel";
 import Pin from "./Pin";
 
@@ -71,7 +71,7 @@ export default function MultiMarker() {
               Author: {popupInfo.author} | Country:{popupInfo.country}
               <br></br>
               Visited on:{popupInfo.visitdate} <br></br>
-              <a href={`http://localhost:3000/blog/${popupInfo.id}`}>blog</a>
+              <Link href={`/blog/${popupInfo.id}`}>blog</Link>
               <br></br>
               <a
                 target="_new"

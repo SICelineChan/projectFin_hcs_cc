@@ -7,12 +7,14 @@ import Dashboard from "./Components/Dashboard";
 
 import TopMenu from "./Components/TopMenu";
 import ContactPage from "./Components/ContactPage";
-import MarkerMap from "./Components/MarkerMap";
+import MarkerMap from "./Components/NewPost";
 import MultiMarker from "./Components/MultiMarker";
 import About from "./Components/About";
 import Footer from "./Components/Footer";
 import travelplcs from "./Components/travelplcs.json";
 import NextBlog from "./Components/NextBlog";
+import SignInPage from "./Components/SignInPage";
+import NewPost from "./Components/NewPost";
 
 function App() {
   return (
@@ -25,11 +27,12 @@ function App() {
         <Route path="/locations" component={MultiMarker}></Route>
         <Route path="/about" component={About}></Route>
         <Route path="/contact" component={ContactPage}></Route>
-        <Route path="/newpost" component={MarkerMap}></Route>
+        <Route path="/newpost" component={NewPost}></Route>
+        <Route path="/signin" component={SignInPage}></Route>
         <Route path="/blog" component={NextBlog}></Route>
 
         <Route path="/blog/:id">
-          {(params) => <NextBlog id={params.id} travelplcs={travelplcs} />}
+          {(params) => <NextBlog id={params.id - 1} travelplcs={travelplcs} />}
         </Route>
 
         <Route>

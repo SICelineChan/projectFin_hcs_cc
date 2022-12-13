@@ -13,9 +13,7 @@ export default function Dashboard() {
     { text: "Locations", aim: "locations" },
     { text: "Dashboard", aim: "dashboard" },
     { text: "About Me", aim: "about" },
-    { text: "New Post", aim: "multi" },
     { text: "Contact", aim: "contact" },
-    { text: "Main Blog", aim: "blog" },
   ];
 
   return (
@@ -29,7 +27,10 @@ export default function Dashboard() {
       </Container>
 
       <main className="container">
-        <div className="p-4 p-md-5 mb-4 rounded text-bg-dark">
+        <div
+          className="p-4 p-md-5 mb-4 rounded "
+          style={{ backgroundColor: "#975C8D" }}
+        >
           <div className="col-md-6 px-0">
             <h1 className="display-4 fst-italic">Dashboard</h1>
             <p className="lead my-3">
@@ -38,7 +39,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="row mb-2">
+        <div className="row mb-2 justify-content-center">
           <div className="col-md-6">
             <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div className="col p-4 d-flex flex-column position-static">
@@ -63,25 +64,46 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-          <div className="col-md-6">
-            <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div className="col p-4 d-flex flex-column position-static">
+          {/* '' */}
+          <div className="col-md-6 text-center justify-content-center">
+            <div className="position-sticky" style={{ top: "2rem" }}>
+              <div className="p-6 mb-6 bg-light rounded justify-content-center">
                 <strong className="d-inline-block mb-2 text-success">
                   Maps
                 </strong>
-                <h3 className="mb-0">with markers</h3>
                 <DashMaps></DashMaps>
+                <br></br>
+                <p className="mb-0">
+                  Customize this section to tell your visitors a little bit
+                  about your publication, writers, content, or something else
+                  entirely. Totally up to you.
+                </p>
               </div>
 
-              <br></br>
-              <div className="col p-4 d-flex flex-column position-static">
+              <div className="p-4 justify-content-center align-content-center">
                 <strong className="d-inline-block mb-2 text-success">
                   <h3 className="mb-0">Featured Country </h3>
                 </strong>
                 <FetchMexicoApi></FetchMexicoApi>
               </div>
+
+              <div className="p-4">
+                <h4 className="fst-italic">Elsewhere</h4>
+                <ol className="list-unstyled">
+                  <li>
+                    <a href="/">GitHub</a>
+                  </li>
+                  <li>
+                    <a href="/">Twitter</a>
+                  </li>
+                  <li>
+                    <a href="/">Facebook</a>
+                  </li>
+                </ol>
+              </div>
             </div>
           </div>
+          {/* '' */}
         </div>
       </main>
     </body>

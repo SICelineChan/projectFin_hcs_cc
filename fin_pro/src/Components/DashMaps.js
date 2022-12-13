@@ -13,6 +13,7 @@ import ControlPanel from "./ControlPanel";
 import travelplcs from "./travelplcs.json";
 
 import "mapbox-gl/dist/mapbox-gl.css";
+import { Link } from "wouter";
 
 const myToken =
   "pk.eyJ1Ijoibm9vZGxlcGVvcGxlIiwiYSI6ImNsYmR4Z3VxazAyN2kzcG55Nno2bTBtZmMifQ.tMJhZlbKAf53O4lJ82dzAA";
@@ -40,7 +41,10 @@ export default function DashMaps() {
   );
 
   return (
-    <div style={{ width: "500px", height: "400px" }}>
+    <div
+      className="justify-content-center align-content-center"
+      style={{ width: "600px", height: "400px" }}
+    >
       <Map
         initialViewState={{
           latitude: 50.477,
@@ -70,7 +74,7 @@ export default function DashMaps() {
               Author: {popupInfo.author} | Country:{popupInfo.country}
               <br></br>
               Visited on:{popupInfo.visitdate} <br></br>
-              <a href={`http://localhost:3000/blog/${popupInfo.id}`}>blog</a>
+              <Link href={`/blog/${popupInfo.id}`}>blog</Link>
               <br></br>
               <br></br>
             </div>
