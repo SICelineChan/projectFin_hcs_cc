@@ -43,11 +43,15 @@ export default function Dashboard() {
           <div className="col-md-6">
             <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div className="col p-4 d-flex flex-column position-static">
-                <strong className="d-inline-block mb-2 text-primary">
-                  The Locations
-                </strong>
-                <h3 className="mb-0">Featured places</h3>
-                <div className="mb-1 text-muted">date</div>
+                <h1>
+                  <strong className="d-inline-block mb-2 text-primary">
+                    The Locations
+                  </strong>
+                </h1>
+                <h3 className="mb-0">Visited Places</h3>
+                <div className="mb-1 text-muted">
+                  And the date that we were there!
+                </div>
                 {travelplcs.map((places) => (
                   <PlaceCards
                     key={places.id}
@@ -64,13 +68,15 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-          {/* '' */}
+
           <div className="col-md-6 text-center justify-content-center">
             <div className="position-sticky" style={{ top: "2rem" }}>
               <div className="p-6 mb-6 bg-light rounded justify-content-center">
-                <strong className="d-inline-block mb-2 text-success">
-                  Maps
-                </strong>
+                <h2>
+                  <strong className="d-inline-block mb-2 text-success">
+                    Maps
+                  </strong>
+                </h2>
                 <DashMaps></DashMaps>
                 <br></br>
                 <p className="mb-0">

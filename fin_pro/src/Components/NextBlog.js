@@ -3,31 +3,24 @@ import Container from "react-bootstrap/esm/Container";
 import Map, { Marker } from "react-map-gl";
 
 import "mapbox-gl/dist/mapbox-gl.css";
-// import travelplcs from "./travelplcs.json";
+
 const myToken =
   "pk.eyJ1Ijoibm9vZGxlcGVvcGxlIiwiYSI6ImNsYmR4Z3VxazAyN2kzcG55Nno2bTBtZmMifQ.tMJhZlbKAf53O4lJ82dzAA";
 export default function NextBlog({ id, travelplcs }) {
   const [index, setIndex] = useState(0);
   const blog = travelplcs[id];
-  console.log(blog.country);
-  // let num = travelplcs[index];
-  // console.log(num);
-
-  // console.log(num);
-  // for (let i = 0; i < blog.length; i++) {
-  //   console.log(blog[2]);
-  // }
+  // console.log(id);
 
   function handleNextClick() {
     setIndex(index + 1);
-    // if (id > id.lenght) {
-    //   id = setIndex(0);
-    // }
-    return;
+    travelplcs[index] = setIndex(6);
   }
 
   function handleGoBackClick() {
     setIndex(index - 1);
+    if (index === 0) {
+      travelplcs[index] = setIndex(1);
+    }
   }
 
   return (
@@ -39,14 +32,16 @@ export default function NextBlog({ id, travelplcs }) {
               <h1 className="display-4 fst-italic">Blog Posts</h1>
               <h2>
                 <i>{blog.name} </i>
-                and the name of the city is {blog.city}
+                The city: {blog.city}
               </h2>
+              <h3>Visited on {blog.visitdate}</h3>
               <p className="lead my-3"></p>
             </div>
           </div>
           <button onClick={handleNextClick}>Next</button>
           <h3>
-            ({index + 1} of {blog.length})
+            {" "}
+            Go to Blog No: ({index}) Country Id:({blog.id}){" "}
           </h3>
           <button onClick={handleGoBackClick}>Back</button>
           <div className="row mb-2">
@@ -271,7 +266,7 @@ export default function NextBlog({ id, travelplcs }) {
             <div className="col-md-4">
               <div className="position-sticky" style={{ top: "2rem" }}>
                 <div className="p-4 mb-3 bg-light rounded">
-                  <h4 className="fst-italic">Guest Author</h4>
+                  <h4 className="fst-italic">Guest Author: Random Someone</h4>
                   <Container className="my-5 d-flex justify-content-center">
                     <img
                       src="https://mdbcdn.b-cdn.net/img/new/avatars/5.webp"
@@ -288,7 +283,7 @@ export default function NextBlog({ id, travelplcs }) {
                 </div>
 
                 <div className="p-4">
-                  <h4 className="fst-italic">Archives</h4>
+                  <h4 className="fst-italic">Blog by Months</h4>
                   <ol className="list-unstyled mb-0">
                     <li>
                       <a href="/">March 2021</a>

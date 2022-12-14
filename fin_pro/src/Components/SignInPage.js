@@ -17,6 +17,10 @@ function SignInPage() {
           height="100px"
         />
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        <h3 className="lead text-muted">
+          Below is an example layout - This form is currently under
+          construction! Will figure out the useId later!
+        </h3>
         <Container>
           <div className="nav-scroller py-1 mb-2">
             <div className="d-flex gap-2 justify-content-md-center">

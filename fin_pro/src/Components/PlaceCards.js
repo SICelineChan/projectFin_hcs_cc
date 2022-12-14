@@ -13,14 +13,17 @@ export default function PlaceCards({ id, country, city, visitdate, imageUrl }) {
             src={imageUrl}
             style={{ width: "15rem" }}
           />
-          <Card className="text-center">
+          <Card className="text-center" style={{ fontSize: "20px" }}>
             <Card.Body>
               <Card.Title>{country}</Card.Title>
               <Card.Text>
                 We travelled to {city} on {visitdate}. For more detail go here:
               </Card.Text>
               <Card.Text>
-                <Link href={`/blog/${id}`}>Blog</Link>
+                <h2>
+                  {" "}
+                  <Link href={`/blog/${id}`}>Blog</Link>
+                </h2>
               </Card.Text>
             </Card.Body>
           </Card>

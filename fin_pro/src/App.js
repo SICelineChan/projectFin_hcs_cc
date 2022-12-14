@@ -7,7 +7,6 @@ import Dashboard from "./Components/Dashboard";
 
 import TopMenu from "./Components/TopMenu";
 import ContactPage from "./Components/ContactPage";
-import MarkerMap from "./Components/NewPost";
 import MultiMarker from "./Components/MultiMarker";
 import About from "./Components/About";
 import Footer from "./Components/Footer";

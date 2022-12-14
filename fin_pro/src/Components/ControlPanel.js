@@ -16,7 +16,7 @@ function ControlPanel() {
           href="https://github.com/visgl/react-map-gl/tree/7.0-release/examples/controls"
           target="_new"
         >
-          View Code ↗
+          {/* View Code ↗ */}
         </a>
       </div>
     </div>

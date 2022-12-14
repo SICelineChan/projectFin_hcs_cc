@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFacebookF, FaGithub, FaGoogle, FaDiscord } from "react-icons/fa";
 
 export default function Footer() {
   //   const footerMenu = [
@@ -7,28 +8,42 @@ export default function Footer() {
   //   ];
   return (
     <div className="container">
-      <footer className="py-3 my-4">
-        <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-          <li className="nav-item">
-            <a href="/home" className="nav-link px-2 text-muted">
-              Home
+      <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div className="col-md-4 d-flex align-items-center">
+          <a className="navbar-brand" href="/home">
+            <img
+              src="./Images/noodleNoBG.png"
+              width="80px"
+              height="55px"
+              className="rounded"
+              alt="logo"
+            />
+          </a>
+          <span className="mb-3 mb-md-0 text-muted">© Celine C 2022</span>
+        </div>
+
+        <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li className="ms-3">
+            <a className="text-muted" href="/">
+              <FaGithub />
             </a>
           </li>
-          <li className="nav-item">
-            <a href="/contact" className="nav-link px-2 text-muted">
-              Contact
+          <li className="ms-3">
+            <a className="text-muted" href="/">
+              <FaFacebookF />
             </a>
           </li>
-          <li className="nav-item">
-            <a href="/about" className="nav-link px-2 text-muted">
-              About
+          <li className="ms-3">
+            <a className="text-muted" href="/">
+              <FaGoogle />
+            </a>
+          </li>
+          <li className="ms-3">
+            <a className="text-muted" href="/">
+              <FaDiscord />
             </a>
           </li>
         </ul>
-        <p className="text-center text-muted">© Celine C 2022 </p>
-        <p className="text-center text-muted">
-          A project at Hamburg Coding School{" "}
-        </p>
       </footer>
     </div>
   );

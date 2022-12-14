@@ -23,19 +23,24 @@ export default function ContactPage() {
               </p>
               <h2>Address:</h2>
               <p>HCS Hamburg Coding School GmbH Borselstraße 7 22765 Hamburg</p>
+              <h3>Website:</h3>
+              <a target="_new" href={`https://hamburgcodingschool.com`}>
+                Hamburg Coding School
+              </a>
               <br></br>
               <h2>Geschäftsführer:</h2>
               <p>Teresa Holfeld</p>
             </p>
+            <br></br>
             <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
               <button type="button" class="btn btn-primary btn-lg px-4 gap-3">
-                Primary button
+                Email Us!
               </button>
               <button
                 type="button"
                 class="btn btn-outline-secondary btn-lg px-4"
               >
-                Secondary
+                Visit Us!
               </button>
             </div>
           </div>

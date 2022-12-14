@@ -15,9 +15,11 @@ export default function NewPost() {
             height="100px"
           />
           <h2>Create a new post</h2>
-          <p className="lead">
-            Below is an example - This form is currently under construction
-          </p>
+          <h3 className="lead text-muted">
+            Below is an example layout - This form is currently under
+            construction! Will figure out the useState for adding new post and
+            date later!
+          </h3>
         </div>
 
         <div className="col-md col-lg">
