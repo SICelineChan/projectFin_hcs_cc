@@ -9,6 +9,7 @@ import TopMenu from "./Components/TopMenu";
 import ContactPage from "./Components/ContactPage";
 import MultiMarker from "./Components/MultiMarker";
 import About from "./Components/About";
+import Tasks from "./Components/Tasks";
 import Footer from "./Components/Footer";
 import travelplcs from "./Components/travelplcs.json";
 import NextBlog from "./Components/NextBlog";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/dashboard" component={Dashboard}></Route>
         <Route path="/locations" component={MultiMarker}></Route>
         <Route path="/about" component={About}></Route>
+        <Route path="/tasks" component={Tasks}></Route>
         <Route path="/contact" component={ContactPage}></Route>
         <Route path="/newpost" component={NewPost}></Route>
         <Route path="/signin" component={SignInPage}></Route>

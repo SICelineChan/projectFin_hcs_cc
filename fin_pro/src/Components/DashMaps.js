@@ -16,7 +16,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { Link } from "wouter";
 
 const myToken =
-  "pk.eyJ1Ijoibm9vZGxlcGVvcGxlIiwiYSI6ImNsYmR4Z3VxazAyN2kzcG55Nno2bTBtZmMifQ.tMJhZlbKAf53O4lJ82dzAA";
+  "pk.eyJ1Ijoibm9vZGxlcGVvcGxlIiwiYSI6ImNsYjVnMGdxNjA0dnAzb3BnZ3FkY2Vzc28ifQ.7czpNqgMmo3nEf4svBfp3A";
 
 export default function DashMaps() {
   const [popupInfo, setPopupInfo] = useState(null);

@@ -30,8 +30,9 @@ export default function TopMenu({ title }) {
           <Nav className="me-auto">
             <Nav.Link href="/dashboard">Dashboard</Nav.Link>
             <Nav.Link href="/locations">Locations</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+            <NavDropdown title="More Info" id="collasible-nav-dropdown">
               <NavDropdown.Item href="/about">About</NavDropdown.Item>
+              <NavDropdown.Item href="/tasks">Tasks</NavDropdown.Item>
               <NavDropdown.Item href="/contact">Contact</NavDropdown.Item>
             </NavDropdown>
           </Nav>

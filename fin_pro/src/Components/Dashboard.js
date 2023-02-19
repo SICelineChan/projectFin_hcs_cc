@@ -13,6 +13,7 @@ export default function Dashboard() {
     { text: "Locations", aim: "locations" },
     { text: "Dashboard", aim: "dashboard" },
     { text: "About Me", aim: "about" },
+    { text: "Tasks", aim: "tasks" },
     { text: "Contact", aim: "contact" },
   ];
 
