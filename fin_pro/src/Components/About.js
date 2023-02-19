@@ -29,22 +29,26 @@ export default function About() {
             </h2>
             <p className="lead">
               Hey, it's Celine and this is a React app for the final project! I
-              have used React Bootstrap for much of the layout and I will be
-              updating this app with a Login page and will try to merge the
-              local JSON with MongoDB.
+              have used React Bootstrap for much of the layout here and there
+              will be updates for this app with a Login page and will try to
+              merge the local JSON with MongoDB. My background has been
+              completely different before I started coding "seriously" in July.
+              It made me realised how much I like a challenge and how my problem
+              solving skills go. Although it will still be a long way and many
+              more daunting tasks ahead. Still, very excited!
             </p>
             <h4 className="featurette-heading fw-normal lh-1">
               And <span className="text-muted">...this photo?</span>
             </h4>
             <p className="lead">
-              The best noodle breakfast! It has all the flavours, sweet, salty,
-              sour and bitter (the coffee!)
+              The best noodle breakfast (in my opinion), this was from Vietnam
+              and I don't think I have any other ones to compare with this one!
             </p>
           </Col>
           <Col>
             <img
               src="./Images/noobfast.jpg"
-              className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid rounded-pill mx-auto"
+              className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid rounded mx-auto"
               width="400"
               height="400"
               alt="rice noodle breakfast"
