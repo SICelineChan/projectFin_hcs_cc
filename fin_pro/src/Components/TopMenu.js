@@ -34,6 +34,7 @@ export default function TopMenu({ title }) {
               <NavDropdown.Item href="/about">About</NavDropdown.Item>
               <NavDropdown.Item href="/tasks">Tasks</NavDropdown.Item>
               <NavDropdown.Item href="/contact">Contact</NavDropdown.Item>
+              <NavDropdown.Item href="/popups">Popups</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav className="justify-content-end">

@@ -15,6 +15,7 @@ import travelplcs from "./Components/travelplcs.json";
 import NextBlog from "./Components/NextBlog";
 import SignInPage from "./Components/SignInPage";
 import NewPost from "./Components/NewPost";
+import Popups from "./Components/Popups";
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
         <Route path="/newpost" component={NewPost}></Route>
         <Route path="/signin" component={SignInPage}></Route>
         <Route path="/blog" component={NextBlog}></Route>
+        <Route path="/popups" component={Popups}></Route>
+
 
         <Route path="/blog/:id">
           {(params) => <NextBlog id={params.id - 1} travelplcs={travelplcs} />}
