@@ -6,7 +6,7 @@ import { Link } from "wouter";
 export default function PlaceCards({ id, country, city, visitdate, imageUrl }) {
   return (
     <>
-      <Row xs={1} md={2} className="g-4">
+      <Row xs={1} md={2} className="g-4 container-size">
         <CardGroup style={{ width: "60rem", padding: "3px" }}>
           <Card.Img
             className="card-img-end"
@@ -23,6 +23,7 @@ export default function PlaceCards({ id, country, city, visitdate, imageUrl }) {
                 <h2>
                   {" "}
                   <Link href={`/blog/${id}`}>Blog</Link>
+                  
                 </h2>
               </Card.Text>
             </Card.Body>

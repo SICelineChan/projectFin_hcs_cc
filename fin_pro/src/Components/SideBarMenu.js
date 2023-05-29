@@ -4,7 +4,7 @@ import MenuOptions from "./MenuOptions";
 
 export default function SideBarMenu({ menu }) {
   return (
-    <div>
+    <div className="NavBar-item">
       {menu.map((item, index) => (
         <Link key={index} href={item.aim}>
           <MenuOptions key={item.text} text={item.text} aim={item.aim} />

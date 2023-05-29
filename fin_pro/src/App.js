@@ -1,6 +1,6 @@
 import React from "react";
 import "./CSS/App.css";
-import HeadHome from "./Components/HeadHome";
+import MainPage from "./Components/MainPage";
 
 import { Switch, Route } from "wouter";
 import Dashboard from "./Components/Dashboard";
@@ -9,13 +9,16 @@ import TopMenu from "./Components/TopMenu";
 import ContactPage from "./Components/ContactPage";
 import MultiMarker from "./Components/MultiMarker";
 import About from "./Components/About";
-import Tasks from "./Components/Tasks";
 import Footer from "./Components/Footer";
 import travelplcs from "./Components/travelplcs.json";
-import NextBlog from "./Components/NextBlog";
+import BlogPage from "./Components/BlogPage";
 import SignInPage from "./Components/SignInPage";
 import NewPost from "./Components/NewPost";
 import Popups from "./Components/Popups";
+
+
+
+
 
 function App() {
   return (
@@ -23,24 +26,22 @@ function App() {
       <TopMenu title="Eat Noodles Go Travel!"></TopMenu>
 
       <Switch>
-        <Route path="/home" component={HeadHome}></Route>
+        <Route path="/home" component={MainPage}></Route>
         <Route path="/dashboard" component={Dashboard}></Route>
         <Route path="/locations" component={MultiMarker}></Route>
         <Route path="/about" component={About}></Route>
-        <Route path="/tasks" component={Tasks}></Route>
         <Route path="/contact" component={ContactPage}></Route>
         <Route path="/newpost" component={NewPost}></Route>
         <Route path="/signin" component={SignInPage}></Route>
-        <Route path="/blog" component={NextBlog}></Route>
+        <Route path="/blog" component={BlogPage}></Route>
+        
         <Route path="/popups" component={Popups}></Route>
-
-
         <Route path="/blog/:id">
-          {(params) => <NextBlog id={params.id - 1} travelplcs={travelplcs} />}
+          {(params) => <BlogPage id={params.id - 1} travelplcs={travelplcs} />}
         </Route>
 
         <Route>
-          <HeadHome />
+          <MainPage />
         </Route>
       </Switch>
       <Footer></Footer>

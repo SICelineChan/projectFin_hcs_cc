@@ -41,11 +41,8 @@ export default function DashMaps() {
   );
 
   return (
-    <div
-      className="justify-content-center align-content-center"
-      style={{ width: "600px", height: "400px" }}
-    >
-      <Map
+    <div className="dashboard-map container-size">
+      <Map 
         initialViewState={{
           latitude: 50.477,
           longitude: 0.7257,
@@ -71,10 +68,10 @@ export default function DashMaps() {
             onClose={() => setPopupInfo(null)}
           >
             <div>
-              Author: {popupInfo.author} | Country:{popupInfo.country}
+              Author: {popupInfo.author} <br></br> Country:{popupInfo.country}
               <br></br>
               Visited on:{popupInfo.visitdate} <br></br>
-              <Link href={`/blog/${popupInfo.id}`}>blog</Link>
+              <Link href={`/blog/${popupInfo.id}`}>Read about this blog</Link>
               <br></br>
               <br></br>
             </div>
