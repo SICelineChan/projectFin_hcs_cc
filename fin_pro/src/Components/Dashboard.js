@@ -60,9 +60,7 @@ export default function Dashboard() {
                 <DashMaps></DashMaps>
                 <br></br>
                 <p className="mb-0">
-                  Customize this section to tell your visitors a little bit
-                  about your publication, writers, content, or something else
-                  entirely. Totally up to you.
+                  Here are some of the places that I have travelled to and I had very good noodles and non-noodles dishes while I was there!
                 </p>
               </div>
 
