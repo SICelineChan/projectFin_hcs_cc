@@ -10,7 +10,7 @@ export default function MainPage() {
         <div className="cover-container d-flex w-100 h-100 py-3 mx-auto flex-column">
           <main className="p-5">
             <h1>Are you also travelling the world and in search of noodles?</h1>
-            <h3>A travelling and food blog</h3>
+            <h3>A travel and food blog</h3>
             <p className="lead">
               <Button variant="outline-light" href="/dashboard">
                 Let's Roll!
